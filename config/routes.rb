@@ -9,6 +9,7 @@ get 'register' => 'users#new'
   delete '/logout' => 'sessions#destroy'
 
   resources :users
+  resources :donations
 
   get 'pages/about'
   get 'pages/help'
@@ -19,6 +20,11 @@ get 'register' => 'users#new'
   # get 'users/index'
   # get 'users/show'
   # get 'users/edit'
+
+  # get 'donations/new'
+  # get 'donations/edit'
+  # get 'donations/show'
+  # get 'donations/index'
 
   # get 'sessions/new'
   # get 'sessions/create'
