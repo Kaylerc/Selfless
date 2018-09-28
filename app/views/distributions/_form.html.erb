@@ -6,9 +6,9 @@
   Distribution Description: <%= f.text_area  :distribution, placeholder: 'What do you have to distribute? (Please be specific so runner and donor can porperly prepare)', required: true %><br>
   Drop Off Location: <%= f.text_area :dropoff_location %><br>
   Drop Off Date: <%= f.date_field :dropoff_date, required: true  %><br>
-  Drop Off Time: <%= f.time_select :dropoff_time, required: true  %><br>
-  Runner: <%= f.text_field :runner, placeholder: 'Runner'%><br>
-  Donor: <%= f.text_field  :donor, placeholder: 'Donor' %><br>
+  Drop Off Time: <%= f.time_select :dropoff_time, ampm: true, required: true  %><br>
+  Runner: <%= f.text_field :runner_id, placeholder: 'Runner'%><br>
+  Donor: <%= f.text_field  :donation_id, placeholder: 'Donor' %><br>
 
     <%= f.submit %>
 <% end %>

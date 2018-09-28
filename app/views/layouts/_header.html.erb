@@ -4,7 +4,7 @@
         <% if logged_in? %>
     <li><%= link_to "#{current_user.email}" %></li>
     <li><%= link_to 'Donate', donations_path %></li>
-    <li><%= link_to 'Run', new_user_path %></li>
+    <li><%= link_to 'Run', runners_path %></li>
     <li><%= link_to 'Distribute', distributions_path %></li>
     <li><%= link_to 'Log out', logout_path, method: :delete %></li>
         <% else %>

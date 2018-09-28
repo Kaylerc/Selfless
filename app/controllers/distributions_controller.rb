@@ -4,9 +4,11 @@ class DistributionsController < ApplicationController
 
 def new
   @distribution = Distribution.new
+  @runners = Runner.all
 end
 
 def index
+  @runners = Runner.all
   @distributions = Distribution.all
 end
 
@@ -47,6 +49,6 @@ private
   end
 
   def distribution_params
-    params.require(:distribution).permit(:first_name, :last_name, :email, :phone, :region, :dropoff_location, :distribution, :dropoff_time, :dropoff_date, :runner, :donor, :password, :password_confirmation)
+    params.require(:distribution).permit(:first_name, :last_name, :email, :phone, :region, :dropoff_location, :distribution, :dropoff_time, :dropoff_date, :runner_id, :donation_id, :password, :password_confirmation)
   end
 end

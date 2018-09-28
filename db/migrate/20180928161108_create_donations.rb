@@ -10,8 +10,8 @@ class CreateDonations < ActiveRecord::Migration[5.2]
       t.time :pickup_time
       t.string :donation
       t.string :pickup_location
-      t.string :runner
-      t.string :distributor
+      t.integer :runner_id
+      t.integer :distribution_id
 
       t.timestamps
     end

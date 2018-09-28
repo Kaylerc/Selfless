@@ -14,6 +14,6 @@ Donation: &nbsp &nbsp&nbsp <%= @donation.donation %> <br>
 Pick Up Location: &nbsp &nbsp&nbsp <%= @donation.pickup_location %> <br>
 Pick Up Date: &nbsp &nbsp&nbsp <%= @donation.pickup_date %> <br>
 Pick Up Time: &nbsp &nbsp&nbsp <%= @donation.pickup_time %> <br>
-Runner: &nbsp &nbsp&nbsp <%= @donation.runner %> <br>
-Distributor: &nbsp &nbsp&nbsp <%= @donation.distributor %> <br>
+Runner: &nbsp &nbsp&nbsp <%= Runner.find(@donation.runner_id).full_name %> <br>
+Distributor: &nbsp &nbsp&nbsp <%= @donation.distribution_id %> <br>
 </div>

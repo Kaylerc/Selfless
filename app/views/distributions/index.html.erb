@@ -13,12 +13,12 @@
       Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= g.email %><br>
       Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= g.phone %><br>
       Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
-      Donation: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
+      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
       Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
       Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
       Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
-      Runner: &nbsp &nbsp&nbsp <%= g.runner %> <br>
-      Distributor: &nbsp &nbsp&nbsp <%= g.donor %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= g.runner_id %> <br>
+      Donor: &nbsp &nbsp&nbsp <%= g.donation_id %> <br>
         <%= link_to "Edit", edit_distribution_path(g.id) %>
     </div>
     <% end %>

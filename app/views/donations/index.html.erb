@@ -17,8 +17,8 @@
       Pick Up Location: &nbsp &nbsp&nbsp <%= d.pickup_location %> <br>
       Pick Up Date: &nbsp &nbsp&nbsp <%= d.pickup_date %> <br>
       Pick Up Time: &nbsp &nbsp&nbsp <%= d.pickup_time %> <br>
-      Runner: &nbsp &nbsp&nbsp <%= d.runner %> <br>
-      Distributor: &nbsp &nbsp&nbsp <%= d.distributor %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= d.runner_id %> <br>
+      Distributor: &nbsp &nbsp&nbsp <%= d.distribution_id %> <br>
         <%= link_to "Edit", edit_donation_path(d.id) %>
     </div>
     <% end %>

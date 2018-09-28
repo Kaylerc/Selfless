@@ -10,8 +10,8 @@ class CreateDistributions < ActiveRecord::Migration[5.2]
       t.time :dropoff_time
       t.string :distribution
       t.string :dropoff_location
-      t.string :runner
-      t.string :donor
+      t.integer :runner_id
+      t.integer :donation_id
 
       t.timestamps
     end

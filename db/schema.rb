@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_163205) do
+ActiveRecord::Schema.define(version: 2018_09_28_192621) do
 
   create_table "distributions", force: :cascade do |t|
     t.string "first_name"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2018_09_28_163205) do
     t.time "dropoff_time"
     t.string "distribution"
     t.string "dropoff_location"
-    t.string "runner"
-    t.string "donor"
+    t.integer "runner_id"
+    t.integer "donation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_distributions_on_email", unique: true
@@ -39,11 +39,22 @@ ActiveRecord::Schema.define(version: 2018_09_28_163205) do
     t.time "pickup_time"
     t.string "donation"
     t.string "pickup_location"
-    t.string "runner"
-    t.string "distributor"
+    t.integer "runner_id"
+    t.integer "distribution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_donations_on_email", unique: true
+  end
+
+  create_table "runners", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "email"
+    t.string "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_runners_on_email", unique: true
   end
 
   create_table "users", force: :cascade do |t|

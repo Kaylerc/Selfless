@@ -12,7 +12,10 @@ get 'register' => 'users#new'
   resources :users
   resources :donations
   resources :distributions
-  resources :runners
+  resources :runners do
+    resources :donations
+    resources :distributions
+  end
 
   get 'pages/about'
   get 'pages/help'

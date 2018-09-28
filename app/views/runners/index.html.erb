@@ -1,2 +1,48 @@
 <h1>Runners#index</h1>
-<p>Find me in app/views/runners/index.html.erb</p>
+
+<div class="mainview">
+<h1>Donation Pickups</h1>
+  <div class="index-grid">
+    <% @donations.each  do |d| %><br>
+    <div class="index-cells-stu">
+      First Name: &nbsp &nbsp<%= d.first_name %><br>
+      Last Name: &nbsp&nbsp<%= d.last_name %><br>
+      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= d.email %><br>
+      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= d.phone %><br>
+      Region: &nbsp &nbsp&nbsp <%= d.region %> <br>
+      Donation: &nbsp &nbsp&nbsp <%= d.donation %> <br>
+      Pick Up Location: &nbsp &nbsp&nbsp <%= d.pickup_location %> <br>
+      Pick Up Date: &nbsp &nbsp&nbsp <%= d.pickup_date %> <br>
+      Pick Up Time: &nbsp &nbsp&nbsp <%= d.pickup_time %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= d.runner_id%> <br>
+      Distributor: &nbsp &nbsp&nbsp <%= d.distribution_id %> <br>
+        <%= link_to "Show", donation_path(d) %>
+        <%= link_to "Edit", edit_donation_path(d.id) %>
+
+    </div>
+    <% end %>
+</div>
+</div>
+<hr>
+
+<div class="mainview">
+<h1>Distribution Dropoffs</h1>
+  <div class="index-grid">
+    <% @distributions.each  do |g| %><br>
+    <div class="index-cells-stu">
+      Last Name: &nbsp&nbsp<%= g.last_name %><br>
+      First Name: &nbsp &nbsp<%= g.first_name %><br>
+      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= g.email %><br>
+      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= g.phone %><br>
+      Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
+      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
+      Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
+      Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
+      Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= g.runner_id %> <br>
+      Donor: &nbsp &nbsp&nbsp <%= g.donation_id %> <br>
+        <%= link_to "Edit", edit_distribution_path(g.id) %>
+    </div>
+    <% end %>
+  </div>
+</div>
