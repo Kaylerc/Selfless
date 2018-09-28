@@ -1,0 +1,19 @@
+<h1>Distributions#show</h1>
+
+    <h1>Distribution</h1><br>
+    <%= link_to "Edit", edit_distribution_path %><br>
+    <%= link_to "Distributions Index", distributions_path %><br>
+    <%= link_to "New Distribution", new_distribution_path %><br><br>
+<div>
+  First Name: &nbsp&nbsp <%= @distribution.first_name %> <br>
+  Last Name: &nbsp &nbsp <%= @distribution.last_name %> <br>
+  Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @distribution.email %> <br>
+  Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp <%= @distribution.phone %> <br>
+  Region: &nbsp &nbsp&nbsp <%= @distribution.region %> <br>
+  Distribution: &nbsp &nbsp&nbsp <%= @distribution.distribution %> <br>
+  Drop Off Location: &nbsp &nbsp&nbsp <%= @distribution.dropoff_location %> <br>
+  Drop Off Date: &nbsp &nbsp&nbsp <%= @distribution.dropoff_date %> <br>
+  Drop Off Time: &nbsp &nbsp&nbsp <%= @distribution.dropoff_time %> <br>
+  Runner: &nbsp &nbsp&nbsp <%= @distribution.runner %> <br>
+  Donor: &nbsp &nbsp&nbsp <%= @distribution.donor %> <br>
+</div>

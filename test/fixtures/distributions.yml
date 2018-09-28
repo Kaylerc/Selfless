@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  phone: MyString
+  email: MyString
+  region: MyString
+  dropoff_date: 2018-09-28
+  dropoff_time: 2018-09-28 12:32:05
+  distribution: MyString
+  dropoff_location: MyString
+  runner: MyString
+  donor: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  phone: MyString
+  email: MyString
+  region: MyString
+  dropoff_date: 2018-09-28
+  dropoff_time: 2018-09-28 12:32:05
+  distribution: MyString
+  dropoff_location: MyString
+  runner: MyString
+  donor: MyString
