@@ -2,7 +2,7 @@
   First Name:  <%= f.text_field :first_name, placeholder: 'First Name', required: true %><br>
   Last Name: <%= f.text_field :last_name, placeholder: 'Last Name', required: true %><br>
   Phone Numner: <%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
-  Region: <%= f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']] %><br>
+  Region: <%= f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']], :include_blank => true  %><br>
   Distribution Description: <%= f.text_area  :distribution, placeholder: 'What do you have to distribute? (Please be specific so runner and donor can porperly prepare)', required: true %><br>
   Drop Off Location: <%= f.text_area :dropoff_location %><br>
   Drop Off Date: <%= f.date_field :dropoff_date, required: true  %><br>
