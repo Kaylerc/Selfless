@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+ html {
+   overflow: none;
+
+ }
+
+ body {
+   /* background-image: url('home5.jpg'); */
+   background-size: cover;
+
+ }

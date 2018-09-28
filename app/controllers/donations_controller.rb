@@ -6,9 +6,11 @@ class DonationsController < ApplicationController
       @donation = Donation.new
     end
 
+
     def index
       @donations = Donation.all
     end
+
 
     def create
       @donation = Donation.new(donation_params)
@@ -22,6 +24,7 @@ class DonationsController < ApplicationController
         p @donation.errors.messages
         render 'new'
       end
+    end
 
 
     def show
@@ -41,7 +44,7 @@ class DonationsController < ApplicationController
 
       def edit
       end
-  end
+
 
 
   private
@@ -51,6 +54,6 @@ class DonationsController < ApplicationController
     end
 
     def donation_params
-      params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :runner, :distributor, :password, :password_confirmation)
+      params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :donation  , :runner, :donor, :password, :password_confirmation)
     end
   end

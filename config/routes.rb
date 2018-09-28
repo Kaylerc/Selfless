@@ -12,6 +12,7 @@ get 'register' => 'users#new'
   resources :users
   resources :donations
   resources :distributions
+  resources :runners
 
   get 'pages/about'
   get 'pages/help'
@@ -32,6 +33,11 @@ get 'register' => 'users#new'
   # get 'distributions/edit'
   # get 'distributions/show'
   # get 'distributions/index'
+
+  # get 'runners/new'
+  # get 'runners/edit'
+  # get 'runners/show'
+  # get 'runners/index'
 
   # get 'sessions/new'
   # get 'sessions/create'
