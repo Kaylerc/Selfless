@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :edit, :update]
-  before_action :find_runner, only: [:index, :create, :show, :update]
+  # before_action :find_runner, only: [:index,:create, :show, :update]
 
 
     def new
@@ -59,7 +59,7 @@ class DonationsController < ApplicationController
       params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :donation, :runner_id, :donor, :password, :password_confirmation)
     end
 
-    def find_runner
-      @runner = Runner.find(params[:id])
-    end
+    # def find_runner
+    #   @runner = Runner.find(params[:id])
+    # end
   end
