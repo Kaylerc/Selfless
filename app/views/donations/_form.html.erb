@@ -1,14 +1,14 @@
 <%= form_for(@donation) do |f| %>
-  First Name:  <%= f.text_field :first_name, placeholder: 'First Name', value: current_user.first_name, required: true %><br>
-  Last Name: <%= f.text_field :last_name, placeholder: 'Last Name', required: true %><br>
+  First Name:  <%= f.text_field :first_name, placeholder: 'First Name', value: current_user.first_name, required: true %> <br>
+  Last Name: <%= f.text_field :last_name, placeholder: 'Last Name', value: current_user.last_name, required: true %><br>
   Phone Numner: <%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
-  Region: <%= f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']], :include_blank => true  %><br>
-  Donation Description: <%= f.text_area  :donation, placeholder: 'What do you have to donate? (Please be specific so runner and distributor can porperly prepare)', required: true %><br>
-  Pick Up Location: <%= f.text_area :pickup_location %><br>
   Pick Up Date: <%= f.date_field :pickup_date, required: true  %><br>
   Pick Up Time: <%= f.time_select :pickup_time, required: true  %><br>
-  Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
-  Distributor: <%= f.text_field  :distribution_id, placeholder: 'Distributor' %><br>
+  Region: <%= f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']], :include_blank => true  %><br>
+  Pick Up Location: <%= f.text_area :pickup_location %><br>
+  Donation Description: <%= f.text_area  :donation, placeholder: 'What do you have to donate? (Please be specific so runner and distributor can porperly prepare)', required: true %><br>
+  Runner: <br>
 
-    <%= f.submit %>
+  <br>
+  <%= f.submit %>
 <% end %>

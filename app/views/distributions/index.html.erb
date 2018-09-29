@@ -10,15 +10,13 @@
     <div class="index-cells-stu">
       Last Name: &nbsp&nbsp<%= g.last_name %><br>
       First Name: &nbsp &nbsp<%= g.first_name %><br>
-      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= g.email %><br>
       Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= g.phone %><br>
-      Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
-      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
-      Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
       Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
       Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
-      Runner: &nbsp &nbsp&nbsp <%= g.runner_id %> <br>
-      Donor: &nbsp &nbsp&nbsp <%= g.donation_id %> <br>
+      Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
+      Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
+      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
+      Runner: &nbsp &nbsp&nbsp <%= g.runner.full_name if g.runner %> <br>
         <%= link_to "Edit", edit_distribution_path(g.id) %>
     </div>
     <% end %>

@@ -5,6 +5,8 @@ class DonationsController < ApplicationController
 
     def new
       @donation = Donation.new
+      @runners = Runner.all
+
     end
 
 
@@ -56,7 +58,7 @@ class DonationsController < ApplicationController
     end
 
     def donation_params
-      params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :donation, :runner_id, :donor, :password, :password_confirmation)
+      params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :donation, :runner_id, :distribution_id, :password, :password_confirmation)
     end
 
     # def find_runner

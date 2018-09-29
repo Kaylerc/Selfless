@@ -40,3 +40,4 @@ class RunnersController < ApplicationController
         params.require(:runner).permit(:first_name, :last_name, :email, :phone, :region)
       end
     end
+  

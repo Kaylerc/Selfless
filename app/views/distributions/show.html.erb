@@ -7,13 +7,11 @@
 <div>
   First Name: &nbsp&nbsp <%= @distribution.first_name %> <br>
   Last Name: &nbsp &nbsp <%= @distribution.last_name %> <br>
-  Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @distribution.email %> <br>
   Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp <%= @distribution.phone %> <br>
-  Region: &nbsp &nbsp&nbsp <%= @distribution.region %> <br>
-  Distribution: &nbsp &nbsp&nbsp <%= @distribution.distribution %> <br>
-  Drop Off Location: &nbsp &nbsp&nbsp <%= @distribution.dropoff_location %> <br>
   Drop Off Date: &nbsp &nbsp&nbsp <%= @distribution.dropoff_date %> <br>
   Drop Off Time: &nbsp &nbsp&nbsp <%= @distribution.dropoff_time %> <br>
-  Runner: &nbsp &nbsp&nbsp <%= @distribution.runner_id %> <br>
-  Donor: &nbsp &nbsp&nbsp <%= @distribution.donation_id %> <br>
+  Region: &nbsp &nbsp&nbsp <%= @distribution.region %> <br>
+  Drop Off Location: &nbsp &nbsp&nbsp <%= @distribution.dropoff_location %> <br>
+  Distribution: &nbsp &nbsp&nbsp <%= @distribution.distribution %> <br>
+  Runner: &nbsp &nbsp&nbsp <%= Runner.find(@distribution.runner_id).full_name if @distribution.runner %> <br>
 </div>

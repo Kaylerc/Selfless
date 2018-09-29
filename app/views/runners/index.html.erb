@@ -16,8 +16,6 @@
       Pick Up Time: &nbsp &nbsp&nbsp <%= d.pickup_time %> <br>
       <%= form_for(d) do |f| %>
         Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
-
-      Distributor: &nbsp &nbsp&nbsp <%= d.distribution_id %> <br>
         <%= f.submit %>
 
 
@@ -43,11 +41,14 @@
       Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
       Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
       Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
-      Runner: &nbsp &nbsp&nbsp <%= g.runner_id %> <br>
-      Donor: &nbsp &nbsp&nbsp <%= g.donation_id %> <br>
-        <%= link_to "show", distribution_path(g) %>
+      <%= form_for(g) do |f| %>
+        Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
+        <%= f.submit %>
+
+
+        <% end %>
 
     </div>
     <% end %>
   </div>
-</div>
+  </div>
