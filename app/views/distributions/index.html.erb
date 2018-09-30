@@ -1,3 +1,7 @@
+<div>
+
+<body style="background-image: linear-gradient(to bottom right, var(--ysub) , #cbcbcb)">
+
 <h1>Distributions#index</h1>
 
 <li><%= link_to 'Post a New Distribution', new_distribution_path %></li>
@@ -8,17 +12,19 @@
   <div class="index-grid">
     <% @distributions.each  do |g| %><br>
     <div class="index-cells-stu">
-      Last Name: &nbsp&nbsp<%= g.last_name %><br>
-      First Name: &nbsp &nbsp<%= g.first_name %><br>
-      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= g.phone %><br>
-      Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
-      Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
-      Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
-      Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
-      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
-      Runner: &nbsp &nbsp&nbsp <%= g.runner.full_name if g.runner %> <br>
+      Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
+      First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
+      Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
+      Drop Off Date: &emsp; <%= g.dropoff_date %> <br>
+      Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
+      Region: &emsp; &emsp; &ensp;&emsp; &ensp; <%= g.region %> <br>
+      Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
+      Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
+      Runner: &emsp;&emsp; &emsp;&emsp; <%= g.runner.full_name if g.runner %> <br>
         <%= link_to "Edit", edit_distribution_path(g.id) %>
     </div>
     <% end %>
   </div>
+</div>
+</body>
 </div>

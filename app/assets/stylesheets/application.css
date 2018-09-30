@@ -183,3 +183,39 @@ margin-right: 60%;
 .rindent {
   padding-left: 3.8em;
 }
+
+.run-grid {
+  display: grid;
+  /* grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr; */
+  grid-row-gap: 3vh;
+  /* margin: 0 7%; */
+  /* grid-template-rows:  0vh; */
+  grid-template: auto/auto auto auto;
+  /* grid-template-columns: auto auto auto; */
+  border: red solid;
+}
+
+.run-cells {
+  grid-column: 1;
+  padding: 1em;
+  border: black 1px solid;
+  height: 58vh;
+  margin-right: 42%;
+  padding-top: 3%
+}
+
+.mainview h1 {
+  text-align: center;
+}
+
+
+.index-grid {
+  display: grid;
+  border:green solid;
+}
+
+.index-cells-donate {
+  border: solid black;
+  max-width: 33.33%;
+  padding:2%;
+}

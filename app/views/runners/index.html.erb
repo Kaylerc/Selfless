@@ -1,54 +1,58 @@
+<div>
+
+<body style="background-image: linear-gradient(to bottom right, var(--maino) , #cbcbcb)">
+
+</div>
+
+
 <h1>Runners#index</h1>
-
-<div class="mainview">
-<h1>Donation Pickups</h1>
-  <div class="index-grid">
-    <% @donations.each  do |d| %><br>
-    <div class="index-cells-stu">
-      First Name: &nbsp &nbsp<%= d.first_name %><br>
-      Last Name: &nbsp&nbsp<%= d.last_name %><br>
-      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= d.email %><br>
-      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= d.phone %><br>
-      Region: &nbsp &nbsp&nbsp <%= d.region %> <br>
-      Donation: &nbsp &nbsp&nbsp <%= d.donation %> <br>
-      Pick Up Location: &nbsp &nbsp&nbsp <%= d.pickup_location %> <br>
-      Pick Up Date: &nbsp &nbsp&nbsp <%= d.pickup_date %> <br>
-      Pick Up Time: &nbsp &nbsp&nbsp <%= d.pickup_time %> <br>
-      <%= form_for(d) do |f| %>
-        Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
-        <%= f.submit %>
-
-
+  <!-- <div class="mainview"> -->
+  <h1>Donation Pickups</h1>
+    <div class="run-grid">
+      <% @donations.each  do |d| %><br>
+      <div class="run-cells">
+        First Name: &emsp; &emsp;&emsp;<%= d.first_name %><br>
+        Last Name: &emsp; &emsp;&emsp; <%= d.last_name %><br>
+        Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= d.phone %><br>
+        Pick Up Date: &emsp;&emsp; <%= d.pickup_date %> <br>
+        Pick Up Time: &emsp; &ensp; &nbsp <%= d.pickup_time %> <br>
+        Region: &emsp; &emsp; &ensp;&emsp; &nbsp <%= d.region %> <br>
+        Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
+        Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
+        <%= form_for(d) do |f| %>
+          Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
+          <%= f.submit %>
         <% end %>
-
+          </div>
+      <% end %>
     </div>
-    <% end %>
-</div>
-</div>
-<hr>
+  <!-- </div> -->
 
-<div class="mainview">
-<h1>Distribution Dropoffs</h1>
-  <div class="index-grid">
-    <% @distributions.each  do |g| %><br>
-    <div class="index-cells-stu">
-      Last Name: &nbsp&nbsp<%= g.last_name %><br>
-      First Name: &nbsp &nbsp<%= g.first_name %><br>
-      Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= g.email %><br>
-      Phone Number: &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp<%= g.phone %><br>
-      Region: &nbsp &nbsp&nbsp <%= g.region %> <br>
-      Distribution: &nbsp &nbsp&nbsp <%= g.distribution %> <br>
-      Drop Off Location: &nbsp &nbsp&nbsp <%= g.dropoff_location %> <br>
-      Drop Off Date: &nbsp &nbsp&nbsp <%= g.dropoff_date %> <br>
-      Drop Off Time: &nbsp &nbsp&nbsp <%= g.dropoff_time %> <br>
-      <%= form_for(g) do |f| %>
-        Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
-        <%= f.submit %>
+  <hr>
+
+  <div class="mainview">
+  <h1>Distribution Dropoffs</h1>
+    <div class="index-grid">
+      <% @distributions.each  do |g| %><br>
+      <div class="index-cells-run">
+        Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
+        First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
+        Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
+        Drop Off Date: &emsp; <%= g.dropoff_date %> <br>
+        Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
+        Region: &emsp; &emsp; &ensp;&emsp; &ensp; <%= g.region %> <br>
+        Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
+        Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
+        <%= form_for(g) do |f| %>
+          Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
+          <%= f.submit %>
 
 
-        <% end %>
+          <% end %>
 
+      </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-  </div>
+</body>
+</div>
