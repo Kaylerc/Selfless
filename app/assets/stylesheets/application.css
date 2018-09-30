@@ -14,6 +14,26 @@
  *= require_self
  */
 
+:root {
+  --main: rgb(236, 0, 173);
+  --maino: rgba(236, 0, 173,.7);
+
+}
+      /* font-family: 'PT Sans Narrow', sans-serif; */
+     font-family: 'Krub', sans-serif;
+     font-family: 'Questrial', sans-serif;
+     font-family: 'Barlow', sans-serif;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     font-family: 'Barlow Condensed', sans-serif;
+     font-family: 'Pontano Sans', sans-serif;
+     font-family: 'Julius Sans One', sans-serif;
+     /* font-family: 'Catamaran', sans-serif; */
+     /* font-family: 'Heebo', sans-serif; */
+     /* font-family: 'PT Sans Caption', sans-serif; */
+     /* font-family: 'Istok Web', sans-serif;
+     font-family: 'Assistant', sans-serif; */
+     /* font-family: 'Molengo', sans-serif; */
+
 
 
  html {
@@ -22,7 +42,71 @@
  }
 
  body {
-   /* background-image: url('home5.jpg'); */
-   background-size: cover;
+     /* background-ima  ge: url('home5.jpg'); */
+     background-size: cover;
+     font-family: 'Julius Sans One', sans-serif;
+}
 
- }
+/* background-image: linear-gradient(to bottom right, black, #cbcbcb);
+opacity: .5; */
+
+/* .nav {
+  margin: 0 0 0 0;
+} */
+
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: .5;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: var(--main);
+}
+
+
+/* .active {
+    background-color: #ec00ad;
+} */
+
+.hopepage {
+  font-weight: bold;
+  font-size: 100px;
+  color: var(--main);
+}
+
+.loginpage {
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main);
+  margin-right: 69%;
+  margin-left: 3%;
+}
+
+.login-box {
+padding: 4%;
+background-color: var(--maino);
+margin-right: 72%;
+}
+
+.profile-box {
+padding: 4%;
+background-color: var(--maino);
+margin-right: 72%;
+}

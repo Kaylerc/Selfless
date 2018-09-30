@@ -1,14 +1,16 @@
 <h1>Pages#home</h1>
 
-<%if logged_in? %>
-  <h1 class="home-welcome">Hey, <%= "#{current_user.first_name}"%> Welcome back!</h1>
-  <h1 class="home-welcome">Today I'll make an impact as a:</h1>
-  <div class="login-home">
-    <%= link_to 'Donor', new_donation_path %><br>
-    <%= link_to 'Runner', new_runner_path %><br>
-    <%= link_to 'Distributor', new_distribution_path %><br>
+<body style="background-image: url(<%= '/assets/home6.jpg' %>)">
+  <%if logged_in? %>
+    <h1 class="home-welcome">Hey, <%= "#{current_user.first_name}"%> Welcome back!</h1>
+    <h1 class="home-welcome">Today I'll make an impact as a:</h1>
+    <div class="login-home">
+      <%= link_to 'Donor', new_donation_path %><br>
+      <%= link_to 'Runner', new_runner_path %><br>
+      <%= link_to 'Distributor', new_distribution_path %><br>
+    </div>
+    <% else %>
+      <h1 class="hopepage">Selfless</h1>
+    <%end %>
   </div>
-  <% else %>
-    <h1 class="titledown">Selfless</h1>
-  <%end %>
-</div>
+</body>
