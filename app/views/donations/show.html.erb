@@ -1,17 +1,18 @@
 <h1>Donations#show</h1>
-
-<h1>Donation</h1><br>
-<%= link_to "Edit", edit_donation_path %><br>
-<%= link_to "Donations Index", donations_path %><br>
-<%= link_to "New Donation", new_donation_path %><br><br>
-<div>
-First Name: &nbsp&nbsp <%= @donation.first_name %> <br>
-Last Name: &nbsp &nbsp <%= @donation.last_name %> <br>
-Phone Number: <%= @donation.phone %><br>
-Pick Up Date: &nbsp &nbsp&nbsp <%= @donation.pickup_date %> <br>
-Pick Up Time: &nbsp &nbsp&nbsp <%= @donation.pickup_time %> <br>
-Region: &nbsp &nbsp&nbsp <%= @donation.region %> <br>
-Pick Up Location: &nbsp &nbsp&nbsp <%= @donation.pickup_location %> <br>
-Donation: &nbsp &nbsp&nbsp <%= @donation.donation %> <br>
-Runner: &nbsp &nbsp&nbsp <%= Runner.find(@donation.runner_id).full_name if @donation.runner_id %> <br>
+<div class="d-new">
+  <h1>Donation</h1><br>
+    <div>
+    First Name: &emsp; &emsp; <%= @donation.first_name %> <br>
+    Last Name:  &emsp; &emsp;&ensp;<%= @donation.last_name %> <br>
+    Phone:  &emsp; &emsp; &emsp; &ensp;<%= @donation.phone %><br>
+    Pick Up Date:  &emsp;&nbsp <%= @donation.pickup_date %> <br>
+    Pick Up Time: &emsp; &nbsp <%= @donation.pickup_time %> <br>
+    Region: &emsp; &emsp; &ensp;&emsp; &ensp;  <% @donation.region %> <br>
+    Pick Up <br>Location:  &emsp; &emsp;&ensp; <%= @donation.pickup_location %> <br>
+    Donation:  &emsp; &emsp;&ensp;<%= @donation.donation %> <br>
+    Runner: &nbsp &nbsp&nbsp <%= Runner.find(@donation.runner_id).full_name if @donation.runner_id %> <br><br>
+  </div>
+  <%= link_to "Edit", edit_donation_path %> &emsp; &emsp;
+  <%= link_to "Index", donations_path %> &emsp; &emsp;
+  <%= link_to "New", new_donation_path %><br>
 </div>

@@ -1,7 +1,7 @@
 <%= form_for(@runner) do |f| %>
-  First Name:  <%= f.text_field :first_name, placeholder: 'First Name', value: current_user.first_name, required: true %><br>
-  Last Name: <%= f.text_field :last_name, placeholder: 'Last Name', value: current_user.last_name, required: true %><br>
-  Phone Numner: <%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
+  First Name:  &emsp;<%= f.text_field :first_name, placeholder: 'First Name', value: current_user.first_name, required: true %><br>
+  Last Name: &emsp;&nbsp<%= f.text_field :last_name, placeholder: 'Last Name', value: current_user.last_name, required: true %><br>
+  Phone: &emsp;&emsp;&emsp;&nbsp<%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
 
     <%= f.submit %>
 <% end %>

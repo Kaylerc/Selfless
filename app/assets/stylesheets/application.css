@@ -17,6 +17,10 @@
 :root {
   --main: rgb(236, 0, 173);
   --maino: rgba(236, 0, 173,.7);
+  --mgreen: rgb(38, 200, 18);
+  --mgreeno: rgba(38, 200, 18,.7);
+  --ysub: rgb(237, 171, 72);
+  --ysubo: rgba(237, 171, 72,.7);
 
 }
       /* font-family: 'PT Sans Narrow', sans-serif; */
@@ -85,7 +89,7 @@ li a:hover:not(.active) {
     background-color: #ec00ad;
 } */
 
-.hopepage {
+.homepage {
   font-weight: bold;
   font-size: 100px;
   color: var(--main);
@@ -108,5 +112,74 @@ margin-right: 72%;
 .profile-box {
 padding: 4%;
 background-color: var(--maino);
-margin-right: 72%;
+margin-right: 60%;
+}
+
+.home-welcome {
+  font-size: 9vh;
+  font-weight:800;
+  color:var(--main);
+  text-align: center;
+}
+
+
+
+.desc-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.desc-grid p {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.desc-grid a {
+  text-decoration: none;
+  font-size: 4vh;
+}
+
+.l-click {
+  background-color: rgb(237, 171, 72);
+  border-radius: 31%;
+  margin-left: 38%;
+  margin-top: 10%;
+  border: solid #596CAB;
+}
+
+
+.c-click {
+  background-color: rgb(237, 171, 72);
+  border-radius: 31%;
+  margin-right: 18%;
+  margin-top: 10%;
+  margin-left: 18%;
+  border: solid #596CAB;
+}
+
+.r-click {
+  background-color: rgb(237, 171, 72);
+  border-radius: 31%;
+  margin-right: 38%;
+  margin-top: 10%;
+  border: solid #596CAB;
+}
+
+.desc {
+  color: rgb(111, 33, 128);
+}
+
+.d-new {
+  background-color: var(--ysubo);
+  margin-right: 60%;
+  padding: 4%;
+}
+
+.indent {
+  padding-left: 1.8em;
+}
+
+.rindent {
+  padding-left: 3.8em;
 }

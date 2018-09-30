@@ -1,16 +1,29 @@
-<h1>Pages#home</h1>
 
-<body style="background-image: url(<%= '/assets/home6.jpg' %>)">
   <%if logged_in? %>
+  <body style="background-image: url(<%= '/assets/home3.jpg' %>)">
+
     <h1 class="home-welcome">Hey, <%= "#{current_user.first_name}"%> Welcome back!</h1>
     <h1 class="home-welcome">Today I'll make an impact as a:</h1>
-    <div class="login-home">
-      <%= link_to 'Donor', new_donation_path %><br>
-      <%= link_to 'Runner', new_runner_path %><br>
-      <%= link_to 'Distributor', new_distribution_path %><br>
-    </div>
+      <div class="desc-grid">
+
+        <div class="l-click">
+          <p><strong><%= link_to 'Donor', new_donation_path %></strong></p>
+          <p class="desc"><%= link_to "Have food you'd like to donate?", new_donation_path %></p>
+        </div>
+
+
+        <div class="c-click">
+          <p><strong><%= link_to 'Runner', new_runner_path %></strong></p>
+          <p class="desc"><%= link_to "Willing to transport food?", new_runner_path %></p>
+        </div>
+        <div class="r-click">
+          <p><strong><%= link_to 'Distributor', new_distribution_path %></strong></p>
+          <p class="desc"><%= link_to "Availabe to Distribute food?", new_distribution_path %></p>
+        </div>
+      </div>
     <% else %>
-      <h1 class="hopepage">Selfless</h1>
+    <body style="background-image: url(<%= '/assets/home6.jpg' %>)">
+      <h1 class="homepage">Selfless</h1>
     <%end %>
   </div>
 </body>
