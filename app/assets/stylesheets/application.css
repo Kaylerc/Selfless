@@ -173,20 +173,19 @@ margin-right: 60%;
   display: grid;
   /* grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr; */
   grid-row-gap: 3vh;
+  grid-column-gap: 3vw;
   /* margin: 0 7%; */
   /* grid-template-rows:  0vh; */
-  grid-template: auto/auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-columns: auto auto auto; */
-  border: red solid;
+  /* border: red solid; */
 }
 
 .run-cells {
-  grid-column: 1;
   padding: 1em;
   border: black 1px solid;
-  height: 58vh;
-  margin-right: 42%;
-  padding-top: 3%
+  height: 45vh;
+  padding: 5%
 }
 
 .mainview h1 {
@@ -203,4 +202,20 @@ margin-right: 60%;
   border: solid black;
   max-width: 33.33%;
   padding:2%;
+}
+
+.center {
+  text-align: center;
+  }
+
+.center a {
+    text-decoration: none;
+    color: var(--main);
+    padding: 1%;
+  }
+
+.center a:hover {
+  color: white;
+  background-color: var(--main);
+  background-size: .75;
 }

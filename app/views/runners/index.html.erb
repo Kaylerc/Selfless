@@ -1,15 +1,12 @@
 <div>
-
-<body style="background-image: linear-gradient(to bottom right, var(--maino) , #cbcbcb)">
-
+  <body style="background-image: linear-gradient(to bottom right, var(--maino) , #cbcbcb)">
 </div>
 
-
-<h1>Runners#index</h1>
+<h1 class="center">Select Donation and Distribution</h1>
   <!-- <div class="mainview"> -->
-  <h1>Donation Pickups</h1>
+  <h2 class="center">Donation Pickups</h2>
     <div class="run-grid">
-      <% @donations.each  do |d| %><br>
+      <% @donations.each  do |d| %>
       <div class="run-cells">
         First Name: &emsp; &emsp;&emsp;<%= d.first_name %><br>
         Last Name: &emsp; &emsp;&emsp; <%= d.last_name %><br>
@@ -20,7 +17,7 @@
         Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
         Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
         <%= form_for(d) do |f| %>
-          Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
+          Runner: &emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
           <%= f.submit %>
         <% end %>
           </div>
@@ -30,11 +27,11 @@
 
   <hr>
 
-  <div class="mainview">
-  <h1>Distribution Dropoffs</h1>
-    <div class="index-grid">
-      <% @distributions.each  do |g| %><br>
-      <div class="index-cells-run">
+
+  <h2 class="center">Donation Dropoffs</h2>
+    <div class="run-grid">
+      <% @distributions.each  do |g| %>
+      <div class="run-cells">
         Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
         First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
         Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
@@ -44,15 +41,12 @@
         Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
         Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
         <%= form_for(g) do |f| %>
-          Runner: <%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
+          Runner: &emsp;&emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %>
           <%= f.submit %>
-
-
           <% end %>
-
       </div>
       <% end %>
     </div>
-  </div>
+  <!-- </div> -->
 </body>
 </div>

@@ -1,24 +1,21 @@
-<div class="mainview">
 <body style="background-image: linear-gradient(to bottom right, var(--ysub) , #cbcbcb)">
-<li><%= link_to 'Post a New Donation', new_donation_path %></li><br>
-<h1><strong>Donation Pickups</h1></ctrong>
-  <div class="index-grid">
-    <% @donations.each  do |d| %><br>
-    <div class="index-cells-donate">
-      First Name: &emsp; &emsp;&emsp;<%= d.first_name %><br>
-      Last Name: &emsp; &emsp;&emsp; <%= d.last_name %><br>
-      Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= d.phone %><br>
-      Pick Up Date: &emsp;&emsp; <%= d.pickup_date %> <br>
-      Pick Up Time: &emsp; &ensp; &nbsp <%= d.pickup_time %> <br>
-      Region: &emsp; &emsp; &ensp;&emsp; &nbsp <%= d.region %> <br>
-      Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
-      Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
-      Runner: &emsp;&emsp;&emsp;&emsp; <%= d.runner.full_name if d.runner %> <br>
-        <%= link_to "Edit", edit_donation_path(d.id) %>
-  </div>
-    <% end %>
 
-</div>
-</div>
+  <h1 class="center"><strong>Donation Pickups</h1></strong>
+    <p class="center"><%= link_to 'Post a New Donation', new_donation_path %></p>
+    <div class="run-grid">
+      <% @donations.each  do |d| %>
+      <div class="run-cells">
+        First Name: &emsp; &emsp;&emsp;<%= d.first_name %><br>
+        Last Name: &emsp; &emsp;&emsp; <%= d.last_name %><br>
+        Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= d.phone %><br>
+        Pick Up Date: &emsp;&emsp; <%= d.pickup_date %> <br>
+        Pick Up Time: &emsp; &ensp; &nbsp <%= d.pickup_time %> <br>
+        Region: &emsp; &emsp; &ensp;&emsp; &nbsp <%= d.region %> <br>
+        Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
+        Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
+        Runner: &emsp;&emsp;&emsp;&emsp; <%= d.runner.full_name if d.runner %> <br><br>
+          <%= link_to "Edit", edit_donation_path(d.id) %>
+        </div>
+      <% end %>
+      </div>
 </body>
-</div>

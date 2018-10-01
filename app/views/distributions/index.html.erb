@@ -1,30 +1,21 @@
-<div>
-
 <body style="background-image: linear-gradient(to bottom right, var(--ysub) , #cbcbcb)">
 
-<h1>Distributions#index</h1>
-
-<li><%= link_to 'Post a New Distribution', new_distribution_path %></li>
-
-
-<div class="mainview">
-<h1>Distribution Dropoffs</h1>
-  <div class="index-grid">
-    <% @distributions.each  do |g| %><br>
-    <div class="index-cells-stu">
-      Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
-      First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
-      Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
-      Drop Off Date: &emsp; <%= g.dropoff_date %> <br>
-      Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
-      Region: &emsp; &emsp; &ensp;&emsp; &ensp; <%= g.region %> <br>
-      Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
-      Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
-      Runner: &emsp;&emsp; &emsp;&emsp; <%= g.runner.full_name if g.runner %> <br>
-        <%= link_to "Edit", edit_distribution_path(g.id) %>
+<h1 class="center"><strong>Distribution Drop Offs</h1></strong>
+  <p class="center"><%= link_to 'Post a New Distribution', new_distribution_path %></p>
+  <div class="run-grid">
+      <% @distributions.each  do |g| %>
+      <div class="run-cells">
+        Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
+        First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
+        Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
+        Drop Off Date: &emsp; <%= g.dropoff_date %> <br>
+        Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
+        Region: &emsp; &emsp; &ensp;&emsp; &ensp; <%= g.region %> <br>
+        Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
+        Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
+        Runner: &emsp;&emsp; &emsp;&emsp; <%= g.runner.full_name if g.runner %> <br><br>
+          <%= link_to "Edit", edit_distribution_path(g.id) %>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-</div>
 </body>
-</div>
