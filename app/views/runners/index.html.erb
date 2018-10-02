@@ -1,4 +1,5 @@
-<div>
+
+  <div>
   <body style="background-image: linear-gradient(to bottom right, var(--maino) , #cbcbcb)">
 </div>
 
@@ -15,14 +16,17 @@
         Pick Up Time: &emsp; &ensp; &nbsp <%= d.pickup_time %> <br>
         Region: &emsp; &emsp; &ensp;&emsp; &nbsp <%= d.region %> <br>
         Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
+        <%= link_to 'View Location', "/runners/pickup/#{d.id}" %>
         Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
         <%= form_for(d) do |f| %>
           Runner: &emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
           <%= f.submit %>
         <% end %>
           </div>
+
       <% end %>
     </div>
+
   <!-- </div> -->
 
   <hr>
@@ -32,8 +36,8 @@
     <div class="run-grid">
       <% @distributions.each  do |g| %>
       <div class="run-cells">
-        Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
         First Name: &emsp; &emsp;&emsp;<%= g.first_name %><br>
+        Last Name: &emsp; &emsp;&emsp; <%= g.last_name %><br>
         Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= g.phone %><br>
         Drop Off Date: &emsp; <%= g.dropoff_date %> <br>
         Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
@@ -43,10 +47,13 @@
         <%= form_for(g) do |f| %>
           Runner: &emsp;&emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %>
           <%= f.submit %>
+
           <% end %>
+
       </div>
       <% end %>
     </div>
   <!-- </div> -->
+
 </body>
 </div>

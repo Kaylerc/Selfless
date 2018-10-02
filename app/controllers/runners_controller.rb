@@ -29,6 +29,10 @@ class RunnersController < ApplicationController
     @runners = Runner.all
   end
 
+def pickup
+  # @runner = Runner.find(params[:id])
+  @donation = Donation.find(params[:donation_id])
+end
 
     private
 
@@ -40,4 +44,3 @@ class RunnersController < ApplicationController
         params.require(:runner).permit(:first_name, :last_name, :email, :phone, :region)
       end
     end
-  
