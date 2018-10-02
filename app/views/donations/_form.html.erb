@@ -4,7 +4,7 @@
   Phone: &emsp;&emsp;&emsp;<%= f.telephone_field :phone, placeholder: 'Phone Number', required: true  %><br>
   Pick Up Date: <%= f.date_field :pickup_date, required: true  %><br>
   Pick Up Time: <%= f.time_field :pickup_time, required: true  %><br>
-  Region: &emsp;&emsp;&ensp;<%=f.select :region, [['North Queens'], ['South Queens'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']], :include_blank => true  %><br>
+  Region: &emsp;&emsp;&ensp;<%=f.select :region, [['North Queens'], ['South Queens'],['Brooklyn'], ['Uptown'], ['Downtown'], ['Midtown'], ['Harlem'], ['Bronx'],['Staten Island']], :include_blank => true  %><br>
   Pick Up Location: &emsp;&emsp;&emsp;<%= f.text_area :pickup_location %><br>
   Donation Description: <%= f.text_area  :donation, placeholder: 'Please be specific so runner and distributor can porperly prepare', required: true %><br>
   Runner: <br>
