@@ -1,6 +1,6 @@
 <style>
   #map {
-    height: 100px;
+    height: 50vh;
   }
 </style>
 
@@ -9,9 +9,16 @@
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
+      center: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
+      zoom: 17
     });
+
+    var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
+          title: 'Hello World!'
+        });
+
   }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_ENV_KEY'] %>&callback=initMap"></script>

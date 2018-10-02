@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_192621) do
+ActiveRecord::Schema.define(version: 2018_10_02_032215) do
 
   create_table "distributions", force: :cascade do |t|
     t.string "first_name"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2018_09_28_192621) do
     t.integer "distribution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_donations_on_email", unique: true
   end
 

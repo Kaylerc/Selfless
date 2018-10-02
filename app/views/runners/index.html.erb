@@ -16,7 +16,7 @@
         Pick Up Time: &emsp; &ensp; &nbsp <%= d.pickup_time %> <br>
         Region: &emsp; &emsp; &ensp;&emsp; &nbsp <%= d.region %> <br>
         Pick Up<br>Location: &emsp; &emsp; &ensp; <%= d.pickup_location %> <br>
-        <%= link_to 'View Location', "/runners/pickup/#{d.id}" %>
+        <%= link_to 'View Location', "/runners/pickup/#{d.id}" %><br>
         Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
         <%= form_for(d) do |f| %>
           Runner: &emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
