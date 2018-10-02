@@ -19,6 +19,7 @@ get 'register' => 'users#new'
   end
 
   get '/runners/pickup/:donation_id' => 'runners#pickup'
+  get '/runners/dropoff/:distr_id' => 'runners#dropoff'
 
   get 'pages/about'
   get 'pages/help'

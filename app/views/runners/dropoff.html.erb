@@ -12,13 +12,13 @@
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
+      center: {lat: <%= @distribution.latitude %>, lng: <%= @distribution.longitude %> },
       zoom: 17
     });
 
     var marker = new google.maps.Marker({
           map: map,
-          position: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
+          position: {lat: <%= @distribution.latitude %>, lng: <%= @distribution.longitude %> },
           title: 'Hello World!'
         });
   }

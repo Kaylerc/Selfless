@@ -34,6 +34,11 @@ def pickup
   @donation = Donation.find(params[:donation_id])
 end
 
+def dropoff
+  # @donation = Donation.find(params[:donation_id])
+  @distribution = Distribution.find(params[:distr_id])
+end
+
     private
 
       def set_runner

@@ -43,6 +43,7 @@
         Drop Off Time: &emsp; &nbsp<%= g.dropoff_time %> <br>
         Region: &emsp; &emsp; &ensp;&emsp; &ensp; <%= g.region %> <br>
         Drop Off<br>Location: &emsp; &emsp; &emsp; <%= g.dropoff_location %> <br>
+        <%= link_to 'View Location', "/runners/dropoff/#{g.id}" %><br>
         Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
         <%= form_for(g) do |f| %>
           Runner: &emsp;&emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %>
