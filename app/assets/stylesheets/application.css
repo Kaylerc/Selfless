@@ -20,7 +20,7 @@
   --mgreen: rgb(38, 200, 18);
   --mgreeno: rgba(38, 200, 18,.7);
   --ysub: rgb(237, 171, 72);
-  --ysubo: rgba(237, 171, 72,.7);
+  --ysubo: rgba(237, 171, 72,.75);
 
 }
 
@@ -101,7 +101,7 @@ margin-right: 60%;
 }
 
 .home-welcome {
-  font-size: 9vh;
+  font-size: 7.5vh;
   font-weight:800;
   color:var(--main);
   text-align: center;
@@ -222,36 +222,36 @@ margin-right: 60%;
 
 .homeback {
   background: linear-gradient(to bottom, rgba(73, 48, 107, 0.61) 0%, rgba(105, 45, 70, 0.53) 39%, rgb(13, 21, 29) 100%), url('/home6.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .formback {
   background: linear-gradient(to bottom, rgba(73, 48, 107, 0.61) 0%, rgba(105, 45, 70, 0.53) 39%, rgb(13, 21, 29) 100%), url('/home5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .lback {
-  background: linear-gradient(to bottom, rgba(73, 48, 107, 0.61) 0%, rgba(105, 45, 70, 0.53) 39%, rgb(13, 21, 29) 100%), url('/home3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    z-index: -1;
+  background-image: url('/home3.jpg');
+  background-size: cover;
+  /* background-position: center; */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .newback {
-    background: linear-gradient(to bottom, rgba(191, 186, 198, 0.61) 0%, rgba(191, 186, 198, 0.61) 100%), url('/home4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    z-index: -1;
+  background: linear-gradient(to bottom, rgba(191, 186, 198, 0.05) 0%, rgba(191, 186, 198, 0.5) 100%), url('/home1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
