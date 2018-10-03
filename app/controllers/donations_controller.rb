@@ -1,22 +1,19 @@
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :edit, :update]
-  # before_action :find_runner, only: [:index,:create, :show, :update]
 
 
     def new
       @donation = Donation.new
       @runners = Runner.all
-
     end
-
 
     def index
       @runners = Runner.all
       @donations = Donation.all
     end
 
-
     def create
+      p "sdljfoisadfoishdhasdgha;siodasdhg;aosukjdvbailudsjhvbanudskhvaodskjha;sodj"
       @donation = Donation.new(donation_params)
       if @donation.save
         msg = "Your donation has been successfully created"
@@ -60,8 +57,4 @@ class DonationsController < ApplicationController
     def donation_params
       params.require(:donation).permit(:first_name, :last_name, :email, :phone, :region, :pickup_location, :pickup_time, :pickup_date, :donation, :runner_id, :distribution_id, :password, :password_confirmation)
     end
-
-    # def find_runner
-    #   @runner = Runner.find(params[:id])
-    # end
   end

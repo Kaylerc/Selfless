@@ -10,7 +10,6 @@ end
 def index
   @runners = Runner.all
   @distributions = Distribution.all
-  
 end
 
 def create
