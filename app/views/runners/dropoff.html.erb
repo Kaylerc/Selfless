@@ -3,31 +3,29 @@
   <head>
     <style>
       #map {
-        height: 60vh;
-        width: 60vw;
-        margin-left: 20%;
-        margin-top: 5%;
+        height: 400px;
+        width: 100%;
        }
     </style>
   </head>
   <body>
 
     <div id="map"></div>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_ENV_KEY'] %>&callback=initMap">
-    
+    <script>
 // Initialize and add the map
-window.initMap = function(){
+function initMap() {
 
-  var dropoff = {lat: <%= @distribution.latitude %>, lng: <%= @distribution.longitude %> }
+  var uluru = {lat: -25.344, lng: 131.036};
 
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 17, center: dropoff});
+      document.getElementById('map'), {zoom: 4, center: uluru});
 
-  var marker = new google.maps.Marker({position: dropoff, map: map});
+  var marker = new google.maps.Marker({position: uluru, map: map});
 }
     </script>
 
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_ENV_KEY'] %>&callback=initMap">
+    </script>
   </body>
 </html>
