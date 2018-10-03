@@ -1,33 +1,11 @@
-<div>
-<body style="background-image: linear-gradient(to bottom right, var(--mgreeno) , #cbcbcb)">
+<div class="mapouter map">
+
+<div class="gmap_canvas">
+
+	<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @donation.latitude %>, <%= @donation.longitude %> &t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"></iframe></div>
+
 </div>
 
-<style>
-  #map {
-    height: 60vh;
-    width: 60vw;
-    margin-left: 20%;
-    margin-top: 5%;
-  }
-</style>
-
-<div id ="map"></div>
-<script>
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
-      zoom: 17
-    });
-
-    var marker = new google.maps.Marker({
-          map: map,
-          position: {lat: <%= @donation.latitude %>, lng: <%= @donation.longitude %> },
-          title: 'Hello World!'
-        });
-  }
-
-
-
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_ENV_KEY'] %>&callback=initMap"></script>
+<div class="plocation">
+  <p> <%= @donation.pickup_location %></p>
+</div>

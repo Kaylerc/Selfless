@@ -1,35 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      #map {
-        height: 60vh;
-        width: 60vw;
-        margin-left: 20%;
-        margin-top: 5%;
-       }
-    </style>
-  </head>
-  <body>
-    <div>
-    <body style="background-image: linear-gradient(to bottom right, var(--mgreeno) , #cbcbcb)">
-    </div>
+<div class="mapouter map">
 
-    <div id="map"></div>
-    <script>
-function initMap() {
+<div class="gmap_canvas">
 
-  var dropoff = {lat: <%= @distribution.latitude %>, lng: <%= @distribution.longitude %> };
+	<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @distribution.latitude %>, <%= @distribution.longitude %> &t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"></iframe></div>
 
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 17, center: dropoff});
+</div>
 
-  var marker = new google.maps.Marker({position: dropoff, map: map});
-}
-    </script>
-
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_ENV_KEY'] %>&callback=initMap">
-    </script>
-  </body>
-</html>
+<div class="plocation">
+  <p> <%= @distribution.dropoff_location %></p>
+</div>

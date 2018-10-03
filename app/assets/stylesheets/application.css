@@ -255,3 +255,29 @@ margin-right: 60%;
   background-repeat: no-repeat;
   z-index: -1;
 }
+
+.gmap_canvas {
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+}
+
+.map {
+  position: fixed;
+  width: 100%;
+}
+
+
+#gmap_canvas {
+  height:90%;
+}
+
+.plocation {
+  z-index: 300;
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 8.5%;
+  background-color: var(--ysub);
+  padding: 1%;
+
+}
