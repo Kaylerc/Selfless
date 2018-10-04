@@ -1,6 +1,5 @@
 class DistributionsController < ApplicationController
   before_action :set_distribution, only: [:show, :edit, :update, :destroy]
-  after_action :update_info, only: [:create]
 
 def new
   @distribution = Distribution.new

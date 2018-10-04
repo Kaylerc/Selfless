@@ -1,6 +1,5 @@
 class DonationsController < ApplicationController
   before_action :set_donation, only: [:show, :edit, :update, :destroy]
-  after_action :update_info, only: [:create]
 
     def new
       @donation = Donation.new
