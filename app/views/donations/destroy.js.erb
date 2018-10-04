@@ -1,0 +1,5 @@
+console.log('testing')
+$('.delete_donation').bind('ajax:success', function() {
+  console.log('deleting ...');
+  $(this).closest('.run-cells-don').fadeOut();
+});

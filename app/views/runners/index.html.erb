@@ -19,8 +19,10 @@
         <%= link_to 'View Location', "/runners/pickup/#{d.id}" %><br>
         Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
         <%= form_for(d) do |f| %>
-          Runner: &emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %> <br>
-          <%= f.submit %>
+        Runner: &emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %>
+            <br>
+            <br>
+        <%= f.submit %>
         <% end %>
           </div>
 
@@ -47,8 +49,9 @@
         Distribution:  &emsp; &ensp;  <%= g.distribution %> <br>
         <%= form_for(g) do |f| %>
           Runner: &emsp;&emsp;&emsp;&emsp;&emsp;<%= f.collection_select :runner_id, Runner.all, :id, :first_name %>
+          <br>
+          <br>
           <%= f.submit %>
-
           <% end %>
 
       </div>

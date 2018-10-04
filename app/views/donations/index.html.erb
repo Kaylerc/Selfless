@@ -4,7 +4,7 @@
     <p class="center"><%= link_to 'Post a New Donation', new_donation_path %></p>
     <div class="run-grid">
       <% @donations.each  do |d| %>
-      <div class="run-cells">
+      <div class="run-cells-don">
         First Name: &emsp; &emsp;&emsp;<%= d.first_name %><br>
         Last Name: &emsp; &emsp;&emsp; <%= d.last_name %><br>
         Phone: &emsp; &emsp; &emsp; &emsp;&ensp;<%= d.phone %><br>
@@ -15,7 +15,10 @@
         Donation: &emsp; &emsp; &ensp;<%= d.donation %> <br>
         Runner: &emsp;&emsp;&emsp;&emsp; <%= d.runner.full_name if d.runner %> <br><br>
           <%= link_to "Edit", edit_donation_path(d.id) %>
-        </div>
+          <%= link_to "Delete", donation_path(d),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?', remote: true }, :class => "delete_donation"  %><br>
+      </div>
       <% end %>
       </div>
 </body>

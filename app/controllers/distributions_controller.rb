@@ -1,6 +1,6 @@
 class DistributionsController < ApplicationController
-  before_action :set_distribution, only: [:show, :edit, :update]
-
+  before_action :set_distribution, only: [:show, :edit, :update, :destroy]
+  after_action :update_info, only: [:create]
 
 def new
   @distribution = Distribution.new
@@ -40,6 +40,17 @@ def update
     render 'edit'
   end
 end
+
+
+def destroy
+    respond_to do |format|
+      format.js
+      format.html { p 'html response'; redirect_to root_path }
+    end
+    @distribution.destroy
+end
+
+
 
 
 private

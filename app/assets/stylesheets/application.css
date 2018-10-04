@@ -98,6 +98,7 @@ margin-right: 72%;
 padding: 4%;
 background-color: var(--maino);
 margin-right: 60%;
+margin-top: 8%;
 }
 
 .home-welcome {
@@ -159,6 +160,7 @@ margin-right: 60%;
   background-color: var(--ysubo);
   margin-right: 60%;
   padding: 4%;
+  margin-top: 2%;
 }
 
 .indent {
@@ -181,11 +183,28 @@ margin-right: 60%;
   /* border: red solid; */
 }
 
+.run-cells-don {
+  padding: 1em;
+  border: black 1px solid;
+  height: 50vh;
+  padding: 5%;
+  box-shadow: 10px 10px 5px grey;
+}
+
 .run-cells {
   padding: 1em;
   border: black 1px solid;
-  height: 45vh;
-  padding: 5%
+  height: 50vh;
+  padding: 5%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.run-cells-dis {
+  padding: 1em;
+  border: black 1px solid;
+  height: 50vh;
+  padding: 5%;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .mainview h1 {
@@ -202,6 +221,7 @@ margin-right: 60%;
   border: solid black;
   max-width: 33.33%;
   padding:2%;
+
 }
 
 .center {
@@ -230,7 +250,7 @@ margin-right: 60%;
 }
 
 .formback {
-  background: linear-gradient(to bottom, rgba(73, 48, 107, 0.61) 0%, rgba(105, 45, 70, 0.53) 39%, rgb(13, 21, 29) 100%), url('/home5.jpg');
+  background: linear-gradient(to bottom, rgba(73, 48, 107, 0.5) 0%, rgba(105, 45, 70, 0.5) 39%, rgb(13, 21, 29) 100%), url('/home5.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -247,8 +267,26 @@ margin-right: 60%;
   z-index: -1;
 }
 
+.newdonback {
+  background: linear-gradient(to bottom, rgba(94, 65, 0, 0.5) 0%, rgba(191, 186, 198, 0.05) 100%), url('/home40.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .newback {
-  background: linear-gradient(to bottom, rgba(191, 186, 198, 0.05) 0%, rgba(191, 186, 198, 0.5) 100%), url('/home1.jpg');
+  background: linear-gradient(to bottom, rgba(94, 65, 0, 0.5) 0%, rgba(191, 186, 198, 0.05) 100%), url('/home1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.regback {
+  background: linear-gradient(to bottom, rgba(5, 4, 0, 0.8) 0%, rgba(191, 186, 198, 0.05) 100%), url('/home2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
